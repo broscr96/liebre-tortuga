@@ -1,0 +1,37 @@
+﻿@model List<TortugaVsLiebre.Models.Animal>
+@{
+    ViewBag.Title = "Personajes";
+}
+<h1>@ViewBag.Title.</h1>
+<h2>@ViewBag.Message</h2>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th><h3>Nombre</h3></th>
+            <th><h3>Tipo de animal</h3></th>
+            <th><h3>Número de patas</h3></th>
+            <th><h3>Foto</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var animal in Model)
+        {
+            <tr>
+                <td><h4>@animal.nombre</h4></td>
+                <td><h4>@animal.tipo</h4></td>
+                <td><h4>@animal.numPatas</h4></td>
+                <td><img src="/img/@animal.foto" alt="Foto de @animal.foto" Width="100px" Height="100px" /></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<footer>
+    <p>
+        <a href="Primero" class="btn btn-success btn-lg">Comenzar &raquo;</a>
+    </p>
+</footer>
